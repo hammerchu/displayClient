@@ -1,0 +1,7 @@
+{
+  "name": "displayClient",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

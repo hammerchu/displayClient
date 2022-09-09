@@ -1,0 +1,36 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">DisplayClient</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <div id="container">
+    <strong>BoardClick Viewer</strong>
+    <p style="font-size: xx-large; margin-top: 20px;">{{currentVideoIndex}}</p>
+    <!-- <p>This is the app to be run on the TV box</p> -->
+    <!-- <ion-button expand="block" color="medium" (click)="playAgain()">Play again</ion-button>
+    <ion-button expand="block" color="medium" (click)="pauseVideo()">Pause</ion-button> -->
+  </div>
+  <div>
+    <video width="1920" height="1080" autoplay
+       #videoPlayer
+       onloadedmetadata="this.muted = true" >
+     <source [src]="videoPath" type="video/mp4">
+    </video>
+    <!-- <video width="1920" height="1080" autoplay
+       #videoPlayer
+       onloadedmetadata="this.muted = true" *ngFor="let src of playBackList; let i = index" >
+        <source [src]="videoPath" type="video/mp4">
+     <source *ngIf="isShow[i]" [src]="playBackList[i]" type="video/mp4">
+    </video> -->
+  </div>
+</ion-content>
